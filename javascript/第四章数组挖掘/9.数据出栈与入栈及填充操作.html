@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let array = ["wangwang","jiangg21"];
+        //.push往后面添加
+        //.pop往后面弹出
+        //.shift 从前面移除
+        let a = array.shift();
+        console.table(a);//wangwang
+        console.table(array);
+        //.unshift 从前面添加
+        array.unshift("汪");
+        console.table(array);
+        array.pop();
+        console.table(array);//汪
+        console.table(array.pop());
+    </script>
+</body>
+</html>

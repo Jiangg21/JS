@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>includes方法的实现原理</title>
+</head>
+<body>
+    <input type="text" id="input" >
+
+    <button onclick="submit()">提交</button>
+    <script>
+       function submit(){ let arr =[1,2,3,4,5];
+        function includes(array,find){
+            for (const value of array) {
+                if (value == find)return true;
+                return false;
+            }
+        }
+        const val = document.querySelector("#input").value;
+        console.log(val);
+        console.log(includes(arr,val));}
+    </script>
+</body>
+</html>

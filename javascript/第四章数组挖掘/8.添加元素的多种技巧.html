@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let array = ["wang",19970402];
+        
+
+        //array[array.length]
+        array[array.length] = "LALA";
+        array[array.length] = "LALALA";
+        //...语法
+        let JG  = ["jiangg","jiangg21"];
+        array = [...array,...JG]
+
+        //.push
+        array.push("wawa");
+        let arr = ["J","g"];
+        array.push(arr);
+        array.push(...arr);
+
+        function rangeArray(begin,end)
+        {
+            const array1= [];
+            for (let i  = begin; i  <= end; i ++) {
+                
+                array1.push(i);
+                
+            }
+            return array1;
+            
+        }
+        
+        console.table(array);
+        console.table(rangeArray(21,30));
+    </script>
+</body>
+</html>

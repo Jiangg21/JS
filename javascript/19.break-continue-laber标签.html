@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>break-containue-label标签</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+
+
+
+        <script src="" async defer></script>
+      <!-- localStorage的用法 -->
+      <!-- <script>
+            localStorage.setItem("jiangg21", "11");
+            let jiangg211 = localStorage.getItem("jiangg21")
+            console.log(jiangg211)
+            let b = localStorage.jiangg = "lalala"
+            console.log(b)
+        </script> -->
+       
+       
+       <script>
+            //continue
+            console.log("continue")
+            for(let n = 0;n<10;n++)
+            {
+                if(n ==5)
+                {
+                    continue;
+                }   
+                console.log(n)
+            }
+
+
+           //break与label标签试例
+           console.log("break与label标签")
+           jiangg21: for(let i = 0;i<10;i++)
+            {
+                 jiangg211: for(let j = 0; j < 10; j++) {
+                   if(i%2==0&&j%2==0)
+                   {
+                        console.log(i,j);
+                   }
+                   if(i+j>15)
+                   {
+                        break jiangg21;//退出标签为jiangg21的标签
+                   }
+                    
+                }
+            }
+
+            //containue标签试例
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义find原型方法</title>
+</head>
+<body>
+    <script>
+        function find(array,callback){
+            for (const value of array) {
+                if(callback(value))return value;
+            }
+            return undefined;
+        }
+
+        let arr = ["wang","wangwang","wangwangwnag","jiang",21];
+        console.log(find(arr,function(item){
+            return item == "wangwang";
+        }));
+    </script>
+</body>
+</html>

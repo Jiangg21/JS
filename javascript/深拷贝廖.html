@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+    <script>
+        //深拷贝
+        let user = {
+            name: '花森',
+            book: {
+                title: "猪猪是怎么炼成的！",
+                price: 69 
+            },
+            booklist: ["a","b"]//属性为数组时的情况
+        }
+        // 递归函数
+        function deepCopy(obj) {
+            let newobj = obj instanceof Array ? [] : {};//判断参数是对象或者数组
+            // console.log(Object.entries(obj));//返回属性的键和值[键][值]两个数组
+            for(const [key,value] of Object.entries(obj)) {
+                //判断属性值是否是对象 如果是则递归调用
+                newobj[key] = typeof value == 'object' ? deepCopy(value) : value;
+            }
+            return newobj;
+        }
+        let huasen = deepCopy(user);
+        user.book.price = 19;//深层对象的的修改
+        huasen.booklist.push("c");//添加数组元素
+
+        console.log("huasen",huasen);
+        console.log("user",user);//得到两个完全不同的对象
+    </script>
+</body>
+
+</html>

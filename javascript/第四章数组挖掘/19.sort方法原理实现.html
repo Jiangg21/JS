@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort方法原理</title>
+</head>
+<body>
+    <script>
+       let arr= [6,4,7,8,2,1,67];
+       //  冒泡排序
+        // function sort(array){
+        //     for (const n in array) {
+        //         for(const m in array){
+        //             if(array[n]<array[m]){
+        //                 const temp = array[n];
+        //                 array[n] = array[m];
+        //                 array[m] = temp;
+
+        //             }
+        //         }
+        //     }
+        //     return array;
+        // }
+        // console.table(sort(arr));
+        
+        //sort
+        function sort(array,callback){
+            for (const n in array) {
+                for(const m in array){
+                    if(callback(array[n],array[m])<0){
+                        const temp = array[n];
+                        array[n] = array[m];
+                        array[m] = temp;
+
+                    }
+                }
+            }
+            return array;
+        }
+        arr = sort(arr,function(a,b){
+            return b-a;
+        });
+        console.log(arr);
+    </script>
+</body>
+</html>

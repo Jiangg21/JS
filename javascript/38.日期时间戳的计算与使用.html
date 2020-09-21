@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            const date = new Date();
+            console.log(date);
+            console.log(typeof date);//obj
+            console.log(date*1)//时间戳
+
+            const jg = Date();
+            console.log(jg);
+            console.log(typeof jg);//string
+
+            //直接使用时间戳
+            const start =  Date.now();
+            console.log(start);
+            console.log(typeof start);//num
+            for (let i = 0; i < 10000000; i++) {}
+            const end = Date.now();
+            console.log((end-start)/1000+"秒");
+
+            //ISO与TIMESTAMP合适互换   即时间与时间戳的转换
+            console.log("时间戳转换");
+            const date1 = new Date("1997-4-21 18:21:21");
+            console.log(date1);//时间格式
+            console.log(date1*1);//时间戳格式
+            console.log(typeof date1);//obj
+            console.log(Number(date1));//时间戳格式
+            console.log(date1.valueOf());//时间戳
+            console.log(new Date(date1.valueOf()));//时间格式
+            const date2 = date1.valueOf();
+            console.log(date2);//时间戳
+            const date3 = new Date(date2);//时间格式    用new Date()转换时间戳
+            console.log(date3);
+
+            const d = new Date();
+            console.log(new Date(d*1));
+
+            //时间格式封装
+            function dateformat(date,format = "YYYY-MM-DD HH:mm:ss"){
+                const config = {
+                    YYYY:date.getFullYear(),
+                    MM:date.getMonth()+1,
+                    DD:date.getDate(),
+                    HH:date.getHours(),
+                    mm:date.getMinutes(),
+                    ss:date.getSeconds(),
+                };
+                for(const key in config)
+                {
+                    format = format.replace(key,config[key]);
+
+                }
+                return format;
+
+            }
+            console.log("时间格式");
+            console.log(dateformat(d,"YYYY年MM月DD日 HH:mm:ss"));
+        </script>
+    </body>
+</html>

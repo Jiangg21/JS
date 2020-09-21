@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>test</title>
+
+    <!-- Bootstrap -->
+    
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+  <body>
+  <script>
+      'use stric'
+      //块作用域{}
+      console.log("块级作用域演示");
+      {
+          var a = "jiangg21.top";
+          let b = "wangwangwang";
+          const c = "www.jiangg21.top";
+
+          var aa;
+          let bb;
+         // c = "wang";  //常量赋值报错Assignment to constant variable. 
+         //const cc;   //未初始化报错Missing initializer in const declaration
+         //const 声明变量必须初始化，而且是不能改变的
+        console.log(a);
+          console.log(b);
+          console.log(c);
+          console.log(aa);//undifined
+          console.log(bb);//undefined
+      }
+      //console.log(c);//引用错误  c is not defined/
+      console.log(a);
+      //console.log(b);//引用错误  b is not defined/
+      //var 声明能跨块级作用域访问  而let 和 const不能
+
+
+      //函数作用域
+        console.log("函数作用域演示");
+        function show() {
+            var d = "jiangg21.top";
+            let e = "wangwangwang";
+            const f = "www.jiangg21.top";
+            console.log(d);
+            console.log(e);
+            console.log(f);
+        }
+        show();
+        //console.log(d);//引用错误  d is not defined/
+        //console.log(e);//引用错误  e is not defined/
+        //console.log(f);//引用错误  f is not defined/
+
+    //let基本用法 变量提升
+    console.log("let基本用法");
+    //console.log(g);//引用错误  g is not defined/
+    console.log(h);
+   // let g = "wangwangwang21";
+    var h = "wangwangwang2121";
+    console.log(h);
+        
+   //重复声明
+   //let i = "lalala";
+   //let i = "wangwangwang212121";
+   //console.log(i);//语法错误，重复声明
+    var i = "lalala";
+    var i = "wangwangwang212121";
+   console.log(i);  
+  </script>
+</body>
+</html>

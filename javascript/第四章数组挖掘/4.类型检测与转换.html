@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>wangwangwang</div>
+    <div>lalala</div>
+       <script>
+           let arr = [1,2,3,4].join("*");
+           console.log(typeof arr);//string
+           console.log(arr);
+           let arr1 = new  Array("wamhwmahwamh");
+           console.log(arr1);
+           console.log(typeof arr1)//obj
+
+           //其他类型转换成数组
+           let str = "wangwangwang";
+           console.log(str.split(","));
+           console.log(str.length);
+           console.table(Array.from(str));
+
+           //对象类型装换成数组，必须加length属性  不然数组为空
+           let obj = {
+               0:"jiangg21",
+               1:"老汪",
+               2:"wangwangwang",
+               length:3
+           };
+           console.log(Array.from(obj));
+      
+           //dom
+           let divs = document.querySelectorAll("div");
+           console.log(
+               Array.from(divs,function(item){
+                   item.style.fontSize = "100px";
+                   item.style.backgroundColor = "blue";
+                   return item;
+               })
+           );
+       </script>
+</body>
+</html>

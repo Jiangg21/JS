@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <script>
+                //console.log(Number(String)+88);
+                const number = 66;
+                console.log(typeof number);//number
+                const str = number+"";
+                console.log(typeof str);//string
+                console.log(typeof String(number));//string
+
+                const string2 ="22.jiangg21";
+                console.log(parseInt(string2));//22 
+                //字符串转换成数组
+                const JG = "jiangg21.top";
+                console.log(JG.split("").length);
+                const arry = ["wangwangwang","jiang"];
+                console.log(arry.join("&"));
+
+                let str2 = "jiangg21";
+                console.log(typeof str);
+                let JG2 = new String("lalalawangwangwang");//对象
+                console.log(typeof JG2);
+                console.log(JG2.substr(4));//lawangwangwang
+                //对象方法能调用toString方法
+                const arr = ["wang","kejiang"];
+                console.log(arr.toString());
+
+                const num = 21;
+                const newNum = num.toString();
+                console.log(newNum+11);
+
+            </script>
+    </body>
+</html>

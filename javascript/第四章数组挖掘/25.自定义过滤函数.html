@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义过滤函数</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5]
+        function filter(array,callback){
+            let newArray = [];
+            for(const value of array){
+                if(callback(value)==true){
+                    newArray.push(value);
+                }
+            }
+            return newArray;
+
+        }
+        console.log(filter(arr,function(value){
+            return value>2;
+        }));
+    </script>
+</body>
+</html>

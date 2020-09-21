@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            const boolean = new Boolean(true);
+            console.log(typeof boolean);//obj
+            console.log(boolean.valueOf());//true
+            if (boolean.valueOf()) {
+                console.log("jiangg21.top");
+            }
+
+            let JG = true;
+            console.log(typeof JG);//boolean
+            if (JG) {
+                console.log("wangwangwang");
+            }            
+
+            let number = 21;
+            console.log(number==false);//false
+           // let number = 0;
+            // console.log(number==false);//true
+            console.log(Boolean(number));
+
+            let arr = [];
+            console.log(Number(arr));//将数组转换成Number打印 0
+            console.log(arr == false);//true; 因为arr[]为空数值为0 所以为false
+
+            let arr2 =[1];
+            console.log(Number(arr2));//将数组转换成Number打印 1
+            console.log(arr2 == true);//true; 因为arr2[]s数值为1 所以为true
+
+            let arr3 =[2];
+            console.log(Number(arr3));//将数组转换成Number打印 2
+            console.log(arr3 == true);//true; 因为arr3[]s数值为2!=1 所以为false
+
+            let arr4 =[1,2,3];
+            console.log(Number(arr4));//将数组转换成Number打印 NaN
+            console.log(arr4 == true);//false; 因为arr4[]有多个数值 所以为false
+            
+            
+            //数值类型  除了0其他都为真  字符串类型除了空字符串其他为真
+
+        </script>
+        
+    </body>
+</html>

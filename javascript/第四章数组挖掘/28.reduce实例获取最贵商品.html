@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce实例</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let goods = [
+        { name: "huaweiP30", price: 3000 },
+        { name: "vivoXPLAY", price: 4000 },
+        { name: "ipad", price: 5000 }
+    ];
+    function maxPrice(g) {
+        return goods.reduce(function (pre, cur) {
+            return pre.price > cur.price ? pre : cur;
+        })
+
+    }
+    console.table(maxPrice(goods));
+
+    //
+    function getNameByPrice(g, price) {
+        return g.reduce(function (arr, cur) {
+            if (cur.price > price) arr.push(cur);
+            return arr;
+        }, [])
+            .map(item => item.name);
+    }
+    console.table(getNameByPrice(goods, 4500));
+</script>
+
+</html>

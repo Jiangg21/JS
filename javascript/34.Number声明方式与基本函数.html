@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <script>
+                let number = new Number(21);
+                console.log(typeof number);//Obj
+                console.log(number.valueOf()+9);
+                let n2 = 221;
+                console.log(typeof n2);//number
+                console.log(n2.valueOf());//221   调用类方法时是先将number转换成对象再进行调用
+                console.log(n2.toString()+1);//2211
+                let s=n2.toString();
+                console.log(typeof s);//String;
+
+                let n3 = 21.211;
+                //console.log(Number.isInteger(n3));
+                console.log(n3.toFixed(1));//21.2
+            </script>
+    </body>
+</html>  

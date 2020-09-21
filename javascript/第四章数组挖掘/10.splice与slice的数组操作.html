@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            'use strict'
+            let arr = ["wang","ke","jiang",21];
+            console.table(arr);
+            //.slice  不改变原数组
+            console.log(arr.slice(1));//从1初切片 不改变原数组  ["ke","jiang","21"]
+            console.log(arr);//["wang","ke","jiang","21"]
+            console.log(arr.slice(1,2));//从1截到2 ["ke"]
+
+            //.splice
+            console.log("splice"); 
+            let arr2 = ["wang2","ke2","jiang2",221];
+            let arr3 = arr2.splice(1,3,"wangwangwang","jiangg21");//截取数组1到3 并且再原数组上拼接“wangwangwang”，“jiangg21”两个元素         改变原数组
+            console.table(arr3);//从1截到后面3个原数  及ke2 jiangg2 221
+            console.table(arr2);//wang2 wangwangwang jiangg21
+        </script>
+</body>
+</html>

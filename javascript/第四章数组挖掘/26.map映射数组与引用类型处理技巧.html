@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map映射数组与引用类型处理技巧</title>
+</head>
+
+<body>
+    <script>
+        let goods = [
+            { name: "huaweiP30", price: 3000 },
+            { name: "vivoXPLAY", price: 4000 },
+            { name: "ipad", price: 5000 }
+        ];
+
+        goods.map(function (value) {
+            value.click = 100;
+        });
+
+        console.log(goods);
+
+
+    //map
+    //https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+    // //Map.prototype.get()
+    // const map1 = new Map();
+    //     map1.set('bar', 'foo');
+
+    //     console.log(map1.get('bar'));
+    //     // expected output: "foo"
+
+    //     console.log(map1.get('baz'));
+    // expected output: undefined
+
+
+
+// expected output: undefined
+    //Map.prototype.size
+    //返回Map对象的键/值对的数量
+    // const map1 = new Map();
+
+    // map1.set('a', 'alpha');
+    // map1.set('b', 'beta');
+    // map1.set('g', 'gamma');
+
+    // console.log(map1.size);
+    // expected output: 3
+
+
+    //Map.prototype.clear()
+    //clear()方法会移除Map对象中的所有元素
+    // const map1 = new Map();
+
+    // map1.set('bar', 'baz');
+    // map1.set(1, 'foo');
+
+    // console.log(map1.size);
+    // // expected output: 2
+
+    // map1.clear();
+
+    // console.log(map1.size);
+    // // expected output: 0
+
+
+
+    </script>
+</body>
+
+</html>

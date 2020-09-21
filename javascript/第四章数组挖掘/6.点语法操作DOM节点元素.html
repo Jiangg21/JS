@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .hide
+        {
+            display: none;
+        }
+    </style>
+    <div>
+        wangwangwang
+    </div>
+    <div>
+        jiangg
+    </div>
+    <script>
+        const div = document.querySelectorAll("div");
+        console.log(div);//NodeList(2)[div,div]
+        //获取dom节点将之转换成数组
+        Array.from(div).map(function(item){
+            console.log(item);//<div>wangwangwang</div> <div>jiangg</div>
+            item.style.fontSize = "50px";
+            item.style.color = "red";
+            item.addEventListener("click",function(){
+                 this.classList.toggle("hide");
+             });
+        });
+        //原型链
+        Array.prototype.map.call(div,function(item){
+            console.log(item);
+        });
+        // [...div].map(function(item){
+        //     item.addEventListener("click",function(){
+        //         this.classList.toggle("hide");
+        //     });
+        // });
+    </script>
+</body>
+</html>

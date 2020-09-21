@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["wangwangwang","jiangg21"];
+        let jg = ["wang","jiang"];
+        //...展开语法
+        arr = [...arr,...jg]
+        console.log(arr);//["wangwangwang", "jiangg21", "wang", "jiang"]
+        console.log(typeof arr);
+        
+        //push
+        let arr1 = ["000","wangwang"];
+        let jg2 = ["111","www"];
+        for(const value of jg2)
+        {
+            arr1.push(value);
+        }
+        console.log(arr1);// ["000", "wangwang", "111", "www"]
+    </script>
+</body>
+</html>

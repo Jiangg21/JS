@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+    <script>
+         //浅拷贝的多种实现方式（复制的对象拥有不同的地址指针）多层次对象不太行
+    let user = {
+        name: '人类',
+        type: '哺乳动物',
+        book: {
+            title: '猪猪是怎样修炼成'
+        }
+    }
+    //直接赋值
+    // let huasen = {
+    //     name: user.name,
+    //     type: user.type
+    // }
+
+    // 循环遍历赋值
+    let huasen = {}
+    for(let key in user) {
+        huasen[key] = user[key];
+    }
+
+    //通过assign进行拷贝
+    // let huasen = Object.assign({},user);
+    console.log(user.book);
+    console.log(huasen);
+
+    //点语法展开
+    // console.log({...user})
+
+
+    </script>
+</body>
+
+</html>

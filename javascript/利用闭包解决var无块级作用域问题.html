@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    
+        <script>
+            for (var i = 0; i <= 3; i++) {
+                // setTimeout(() => {// 使用延时函数的目的是让for先执行完成看看var声明是否形式函数作用域
+                console.log("不作闭包时输出i: ", i);//var声明时输出4个4
+                // },1000)
+                //立即函数执行4回每一回都形成一 个独立的函数块传入的每一 个i都是独立的
+                (function (i) {//立即执行函数函数有闭包效果当var声明的i变量传入函数中被使用就会驻留在内存不删掉
+                    setTimeout(() => {
+                        console.log("作闭包时i: ", i);
+                    }, 1000)
+                })(i);
+        }
+        </script>
+    </body>
+</html>

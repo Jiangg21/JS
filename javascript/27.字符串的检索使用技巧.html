@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            let JG = "jiangg21.top"
+            // if(JG.indexOf("p")!=-1)
+            // {
+            //     console.log("找到了");
+            // }
+            //console.log(JG.includes("k"))
+            let word = ["JS","Vue"];
+            let string = "我正在学习JS和Vue";
+            let status = word.some(word=>{
+               
+                return string.includes(word);
+            });
+            if (status)
+            {
+                console.log("找到了关键词");
+            }
+            // word.some(word=>{
+            //     console.log(word);
+            //     return string.includes(word);
+            // });
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>

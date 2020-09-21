@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find与findIndex方法</title>
+</head>
+<body>
+    <script>
+        let arr = ["wang","wangwang","wangwangwang","jiangg",21];
+        let res = arr.find(function(item){
+            //console.table(item);
+            return item == "wangwang";
+        });
+        console.log(res);
+
+        let lessons =[{name:"JS"},{name:"VUE"},{name:"sql"}];
+        let res2 = lessons.findIndex(function(item){
+            return item.name =="VUE"
+        });
+
+        console.log(res2);
+    </script>
+</body>
+</html>

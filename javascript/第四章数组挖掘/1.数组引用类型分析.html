@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = new Array("jiangg21","wangwangwang",1,2,3);
+        console.log(array);// ["jiangg21", "wangwangwang", 1, 2, 3]
+        console.log(array.join("|"));//jiangg21|wangwangwang|1|2|3
+        
+        //引用类型    使用同一内存地址·1
+        let array1 = [0,1,2,3,4,5];
+        let jg = array1;
+        jg[1] = "jiangg21";
+        console.log(jg);//[0,"jiangg",2,3,4,5]
+        console.log(array1);//[0,"jiangg",2,3,4,5]
+        //使用同一个内存地址
+        console.log(typeof array1);//obj
+        console.log(typeof jg);//obj
+
+        //值类型   使用不同内存地址
+        let a = "jiangg21";
+        let b = a;
+        b = "lalala"
+        console.log(a);//jiangg21
+        console.log(b);//lalala
+
+        console.table(jg);
+    </script>
+</body>
+</html>

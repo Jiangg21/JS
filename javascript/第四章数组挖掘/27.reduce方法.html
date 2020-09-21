@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce方法</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //数组的reduce方法
+    //accumulator 累加器
+    //currentValue当前值
+    //currentIndex当前索引
+
+    // var sum = [0,1,2,3,].reduce(function(accumulator,currentValue){
+    //     return accumulator+currentValue;
+    // },0);
+
+    var sum = [0, 1, 2, 3].reduce((acc, cur) => acc + cur, 0);
+    console.log(sum);
+
+    //按属性对object分类
+    var people = [
+        { name: 'Alice', age: 21 },
+        { name: 'Max', age: 20 },
+        { name: 'Jane', age: 20 }
+    ];
+
+    function groupBy(objectArray, property) {
+        return objectArray.reduce(function (acc, obj) {
+            var key = obj[property];
+            if (!acc[key]) {
+                //false
+                acc[key] = [];
+            }
+            acc[key].push(obj);
+            return acc;
+        }, {});
+    }
+
+    var groupedPeople = groupBy(people, 'age');
+    console.log(groupedPeople);
+
+    //reduce方法数组去重
+    let arr=[1,2,3,1,2,3,4,5,5,4,4,4,4];
+    let result = arr.sort().reduce((init,current)=>{
+        if(init.length ===0||init[init.length-1]!==current)
+        {
+            init.push(current);
+        }
+        return init;
+    },[])
+</script>
+
+</html>

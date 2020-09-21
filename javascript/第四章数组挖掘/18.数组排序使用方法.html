@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组排序方法使用</title>
+</head>
+<body>
+    <script>
+        console.log("sort方法排序 a-b 从小到大排序 b-a从大到小排序")
+        let arr= [6,4,7,8,2,1,67];
+        arr2 = arr.sort(function(a,b){
+            return b-a;
+        });
+        console.table(arr2);
+        console.table(arr);
+        
+        console.log("商品排序");
+        let goods =[{name:"huaweiP30",price:3000},{name:"vivoXPLAY",price:4000},{name:"ipad",price:5000}];
+        goods = goods.sort(function(a,b){
+            return b.price-a.price;
+        });
+        console.table(goods);
+    </script>
+</body>
+</html>

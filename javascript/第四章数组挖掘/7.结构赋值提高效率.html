@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        let arr = ["wangwangwang","19970402"];
+        //let name = arr[0];
+        //let year = arr[1];
+        let [name,year] =arr;
+        console.log(name);
+        console.log(name,year); 
+
+        let [lala,wawa] = arr;
+        console.log(wawa);//19970402
+
+        let [name1,...args] = ["wang","lalala",121212];
+        console.log(args);//["lalala",121212]
+    </script>
+</body>
+</html>

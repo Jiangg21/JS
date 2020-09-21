@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p class="lala" id="lala" style="color: red;font-size: 50px;"></p>
+        <p id="lalala" style="color: blue;font-size: 50px;"></p>
+        <script>
+            //  0<= 1
+            console.log(Math.random());
+            //0~5  0~0.9*5  
+            //Math.floor(Math.floor(Math.random()*(mix+1)));
+            console.log(Math.floor(Math.random()*(5+1)));
+
+            //2~5
+            //min+Math.floor(Math.random()*(max-min+1))
+            console.log(2+Math.floor(Math.random()*(5-2+1)));
+
+            const students = ["老汪","小雪","趴苕","小王","亚索","永恩"];
+
+            //0~studedts.length
+            console.log(students[Math.floor(Math.random()*(5+1))]);
+
+            const stu = students[Math.floor(Math.random()*(5+1))];
+            const stu2 = students[Math.floor(Math.random()*(5+1))];
+            console.log(stu);
+            console.log(stu2);
+            console.log(typeof stu);
+            document.getElementById("lala").innerHTML =stu;
+            document.querySelector("[id = 'lalala']").innerHTML =stu2;
+            //document.getElementById("lala")
+            //document.querySelector("[id = 'lala']")
+            
+        </script>
+    </body>
+</html>
